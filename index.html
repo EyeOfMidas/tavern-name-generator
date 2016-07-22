@@ -1,0 +1,51 @@
+<div id="suggest">The Prancing Pony</div>
+<button id="generate">Generate</button>
+
+<script type="text/javascript">
+var adjectives = [];
+var things = [];
+var adjectivesGet = new XMLHttpRequest();
+adjectivesGet.open('GET', 'adjectives.txt');
+adjectivesGet.onreadystatechange = function() {
+	if (adjectivesGet.readyState == 4 && adjectivesGet.status == 200) {
+		adjectives = adjectivesGet.responseText.trim().split("\n");
+	}
+}
+adjectivesGet.send();
+
+var thingsGet = new XMLHttpRequest();
+thingsGet.open('GET', 'things.txt');
+thingsGet.onreadystatechange = function() {
+	if (thingsGet.readyState == 4 && thingsGet.status == 200) {
+		things = thingsGet.responseText.trim().split("\n");
+	}
+}
+thingsGet.send();
+
+document.getElementById("generate").addEventListener('click', function() {
+	var name = "The " + adjectives.shuffle().pop().toCamelCase() + " " + things.shuffle().pop().toCamelCase();
+	document.getElementById("suggest").innerHTML = name;
+});
+
+String.prototype.toCamelCase = function() {
+	var words = this.split(" ");
+	for(var i = 0; i < words.length; i++)
+	{
+		words[i] = words[i][0].toUpperCase() + words[i].slice(1, words[i].length);
+	}
+	
+	return words.join(" ");
+}
+
+Array.prototype.shuffle = function() {
+	var array = this;
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+</script>
+

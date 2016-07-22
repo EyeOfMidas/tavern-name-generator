@@ -1,0 +1,299 @@
+abrian
+amphisbaena
+ankheg
+aranea
+aspis
+aurumvorax
+basilisk
+behir
+bhaergala
+blink dog
+bloodsilk spider
+bulette
+bunyip
+cave fisher
+chimera
+cockatrice
+darkmantle
+death dog
+debbi
+digester
+disenchanter
+displacer beast
+displacer serpent
+dracolisk
+draconic creature
+dragonfish
+dragonne
+ethereal marauder
+fal
+fiendwurm
+firetoad
+frost salamander
+frost worm
+gathra
+giant eagle
+girallon
+gorgimera
+gorgon
+gray glutton
+gray render
+griffon
+hydra
+jackalwere
+jaculi
+kamadan
+ki-rin
+kirre
+kraken
+krenshar
+kruthik
+lamia
+lammasu
+leucrotta
+manticore
+osquip
+owlbear
+pegasus
+peryton
+phase spider
+purple worm
+remorhaz
+rhaumbusun
+roper
+rothé
+salamander
+sea cat
+shedu
+shocker lizard
+sleek
+sphinx
+spider eater
+stirge
+su-monster
+tarrasque
+thoul
+thrum worm
+tressym
+unicorn
+winged serpent
+winter wolf
+worg
+yrthak
+aboleth
+ahuizotl
+athach
+balhannoth
+beholder
+carrion crawler
+catoblepas
+choker
+choldrith
+chuul
+cloaker
+delver
+destrachan
+dolgaunt
+dolgrim
+drider
+ethereal filcher
+ethergaunt
+ettercap
+eye of the deep
+feyr
+flumph
+froghemoth
+gambado
+garbug
+gibbering mouther
+grell
+grick
+illithid
+intellect devourer
+ixitxachitl
+lurker
+meenlock
+mimic
+morkoth
+naga
+neogi
+nothic
+otyugh
+phaerimm
+phasm
+rust monster
+sharn
+skum
+spectator
+tentamort
+thessalmonster
+thought eater
+umber hulk
+ustilagor
+vodyanoi
+volt
+webbird
+will-o'-wisp
+witchlight marauder
+ent
+giant
+goblin
+kobold‎
+leprechaun
+mermaid‎
+monster‎
+nymph‎
+orc‎
+satyr
+troll‎
+vampire
+werewolves
+balor
+bandersnatch
+cambion
+cheshire cat
+deodand
+echthroi
+gremlin
+gryphon
+half-giant
+half-orc
+hircocervus
+jubjub bird
+marsh-wiggle
+mock turtle
+monopod
+orc
+panotti
+pantathians
+peryton
+questing beast
+serpent men
+skandranon
+sphinx
+sylph
+wererat
+wererat
+worghest
+dragon
+wyrm
+accountant
+actor
+actress
+athlete
+author
+baker
+banker
+barber
+beautician
+broker
+burglar
+butcher
+carpenter
+chauffeur
+chef
+clerk
+coach
+craftsman
+criminal
+crook
+dentist
+doctor
+editor
+engineer
+farmer
+fire fighter
+fisherman
+judge
+lawyer
+magician
+mechanic
+musician
+nurse
+pharmacist
+pilot
+poet
+policeman
+politician
+printer
+professor
+rabbi
+priest
+pastor
+sailor
+salesman
+shoemaker
+soldier
+tailor
+teacher
+veterinarian
+waiter
+waitress
+watchmaker
+
+baker	
+butcher	
+carpebter	
+cook
+baker
+butcher
+carpenter
+cook
+farmer
+fireworker
+fisherman
+gardener
+farmer
+
+fireman
+fisherman
+gardener
+hairdresser
+journalist
+judge
+lawyer
+hairdresser
+journalist
+judge
+lawyer
+mason
+mechanic
+painter
+plumber
+mason
+mechanic
+painter
+plumber
+policeman
+postman
+secretary
+singer
+policeman
+postman
+secretary
+singer
+soldier
+taxidriver
+teacher
+waiter
+soldier
+taxi driver
+teacher
+waiter
+pilot
+engineer
+doctor
+nurse
+pilot
+engineer
+doctor
+nurse
+goldsmith
+actor
+shoe-shine boy
+tailor
+goldsmith
+actor
+shoe-shine boy
+tailor
+
