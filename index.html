@@ -32,7 +32,7 @@ document.getElementById("generate").addEventListener('click', function() {
 	var historyItem = document.createElement("li");
 	historyItem.innerHTML = name;
 	var historyList = document.getElementById("history");
-	historyList.appendChild(historyItem);
+	historyList.insertBefore(historyItem, historyList.firstChild);
 });
 
 String.prototype.toCamelCase = function() {
