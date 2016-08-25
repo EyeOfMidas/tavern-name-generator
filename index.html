@@ -1,6 +1,10 @@
 <div id="suggest">The Prancing Pony</div>
 <button id="generate">Generate</button>
-
+<div id="history-container">
+<ul id="history">
+	<li>The Prancing Pony</li>
+</ul>
+<div>
 <script type="text/javascript">
 var adjectives = [];
 var things = [];
@@ -25,6 +29,10 @@ thingsGet.send();
 document.getElementById("generate").addEventListener('click', function() {
 	var name = "The " + adjectives.shuffle().pop().toCamelCase() + " " + things.shuffle().pop().toCamelCase();
 	document.getElementById("suggest").innerHTML = name;
+	var historyItem = document.createElement("<li>");
+	historyItem.innerHTML = name;
+	var historyList = document.getElementById("history");
+	historyList.appendChild(historyItem);
 });
 
 String.prototype.toCamelCase = function() {
