@@ -26,8 +26,61 @@ thingsGet.onreadystatechange = function() {
 }
 thingsGet.send();
 
+function getRandomWord(wordBucket) {
+	return wordBucket.shuffle().pop().toCamelCase();
+}
+
+function generateName(adjectives, things) {
+
+	var name = "";
+	var styleIndex = Math.floor(9 * Math.random() + 1);
+	switch(styleIndex) {
+		case 9:
+			name = getRandomWord(things) + " of the " + getRandomWord(adjectives) + " " + getRandomWord(things);
+			break;
+		case 8:
+			name = getRandomWord(adjectives) + " " + getRandomWord(things) + " of the " + getRandomWord(adjectives) + " " + getRandomWord(things);
+			break;
+		case 7:
+			name = getRandomWord(adjectives) + " " + getRandomWord(things) + " of the " + getRandomWord(things);
+			break;
+		case 6:
+			name = getRandomWord(things) + " " + getRandomWord(things) + " " + getRandomWord(things);
+			break;
+		case 5:
+			name = getRandomWord(adjectives) + " " + getRandomWord(things) + " of " + getRandomWord(adjectives) + " " + getRandomWord(things);
+			break;
+		case 4:
+			name = getRandomWord(things) + " of " + getRandomWord(adjectives) + " " + getRandomWord(things);
+			break;
+		case 3:
+			name = getRandomWord(adjectives) + " " + getRandomWord(adjectives) + " " + getRandomWord(things);
+			break;
+		case 2:
+		case 1:
+		default:
+			name = getRandomWord(adjectives) + " " + getRandomWord(things);
+			break;
+	}
+
+	var modifierIndex = Math.floor(3 * Math.random() + 1);
+	switch(modifierIndex) {
+		case 3:
+			name += " Pub";
+			break;
+		case 2:
+			name += " Tavern";
+			break;
+		case 1:
+		default:
+			name = "The " + name;
+			break;
+	}
+	return name;
+}
+
 document.getElementById("generate").addEventListener('click', function() {
-	var name = "The " + adjectives.shuffle().pop().toCamelCase() + " " + things.shuffle().pop().toCamelCase();
+	var name = generateName(adjectives, things);
 	document.getElementById("suggest").innerHTML = name;
 	var historyItem = document.createElement("li");
 	historyItem.innerHTML = name;
