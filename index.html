@@ -1,112 +1,30 @@
-<div id="suggest">The Prancing Pony</div>
-<button id="generate">Generate</button>
-<div id="history-container">
-<ul id="history">
-	<li>The Prancing Pony</li>
-</ul>
-<div>
-<script type="text/javascript">
-var adjectives = [];
-var things = [];
-var adjectivesGet = new XMLHttpRequest();
-adjectivesGet.open('GET', 'adjectives.txt');
-adjectivesGet.onreadystatechange = function() {
-	if (adjectivesGet.readyState == 4 && adjectivesGet.status == 200) {
-		adjectives = adjectivesGet.responseText.trim().split("\n");
-	}
-}
-adjectivesGet.send();
 
-var thingsGet = new XMLHttpRequest();
-thingsGet.open('GET', 'things.txt');
-thingsGet.onreadystatechange = function() {
-	if (thingsGet.readyState == 4 && thingsGet.status == 200) {
-		things = thingsGet.responseText.trim().split("\n");
-	}
-}
-thingsGet.send();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tavern Name Generator</title>
 
-function getRandomWord(wordBucket) {
-	return wordBucket.shuffle().pop().toCamelCase();
-}
+	<link rel="stylesheet" media="screen" href="./css/main.css">
 
-function generateName(adjectives, things) {
-
-	var name = "";
-	var styleIndex = Math.floor(9 * Math.random() + 1);
-	switch(styleIndex) {
-		case 9:
-			name = getRandomWord(things) + " of the " + getRandomWord(adjectives) + " " + getRandomWord(things);
-			break;
-		case 8:
-			name = getRandomWord(adjectives) + " " + getRandomWord(things) + " of the " + getRandomWord(adjectives) + " " + getRandomWord(things);
-			break;
-		case 7:
-			name = getRandomWord(adjectives) + " " + getRandomWord(things) + " of the " + getRandomWord(things);
-			break;
-		case 6:
-			name = getRandomWord(things) + " " + getRandomWord(things) + " " + getRandomWord(things);
-			break;
-		case 5:
-			name = getRandomWord(adjectives) + " " + getRandomWord(things) + " of " + getRandomWord(adjectives) + " " + getRandomWord(things);
-			break;
-		case 4:
-			name = getRandomWord(things) + " of " + getRandomWord(adjectives) + " " + getRandomWord(things);
-			break;
-		case 3:
-			name = getRandomWord(adjectives) + " " + getRandomWord(adjectives) + " " + getRandomWord(things);
-			break;
-		case 2:
-		case 1:
-		default:
-			name = getRandomWord(adjectives) + " " + getRandomWord(things);
-			break;
-	}
-
-	var modifierIndex = Math.floor(3 * Math.random() + 1);
-	switch(modifierIndex) {
-		case 3:
-			name += " Pub";
-			break;
-		case 2:
-			name += " Tavern";
-			break;
-		case 1:
-		default:
-			name = "The " + name;
-			break;
-	}
-	return name;
-}
-
-document.getElementById("generate").addEventListener('click', function() {
-	var name = generateName(adjectives, things);
-	document.getElementById("suggest").innerHTML = name;
-	var historyItem = document.createElement("li");
-	historyItem.innerHTML = name;
-	var historyList = document.getElementById("history");
-	historyList.insertBefore(historyItem, historyList.firstChild);
-});
-
-String.prototype.toCamelCase = function() {
-	var words = this.split(" ");
-	for(var i = 0; i < words.length; i++)
-	{
-		words[i] = words[i][0].toUpperCase() + words[i].slice(1, words[i].length);
-	}
-	
-	return words.join(" ");
-}
-
-Array.prototype.shuffle = function() {
-	var array = this;
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
-}
-</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Justin Gilman">
+	<meta name="description" content="A simple site that will generate random fantasy-themed tavern names. Great for the DM on the go!">
+	<meta name="robots" content="all">
+</head>
+<body>
+	<div class="content">
+		<div id="tavern-sign">
+			<div id="suggest">The Prancing Pony</div>
+		</div>
+		<button id="generate">Generate</button>
+		<div id="history-container">
+			<ul id="history">
+				<li>The Prancing Pony</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/generator.js"></script>
+</body>
+</html>
 

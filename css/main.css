@@ -1,0 +1,39 @@
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	text-align: center;
+}
+
+#tavern-sign {
+	border: 1px solid lightgray;
+	height: 300px;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-top: 140px;
+	font-size: 48px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 1.5em;
+}
+
+#generate {
+	width: 200px;
+	height: 60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#history-container {
+	border: 1px solid lightgray;
+	width: 400px;
+	height: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: scroll;
+	text-align: left;
+}
