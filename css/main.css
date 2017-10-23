@@ -79,6 +79,9 @@ html,body {
 		height: auto;
 		overflow-y: initial;
 	}
+	.photo-credit {
+		display: none;
+	}
 }
 
 @media only screen and (max-height: 414px) {
@@ -110,5 +113,9 @@ html,body {
 		width: auto;
 		height: auto;
 		overflow-y: initial;
+	}
+
+	.photo-credit {
+		display: none;
 	}
 }
