@@ -1,10 +1,7 @@
 html,body {
 	margin: 0;
 	padding: 0;
-}
-
-.content {
-	text-align: center;
+	height: 100%;
 }
 
 .photo-credit {
@@ -47,6 +44,25 @@ html,body {
 	margin-right: auto;
 	overflow-y: scroll;
 	text-align: left;
+}
+
+#wrap {
+	min-height: 100%;
+}
+
+#main {
+	text-align: center;
+	overflow:auto;
+    padding: 5px;
+	padding-bottom: 60px;
+}
+
+#footer {
+	position: relative;
+	margin-top: -40px;
+	height: 40px;
+	clear:both;
+	text-align: center;   
 }
 
 @media only screen and (max-width: 499px) {
